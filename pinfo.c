@@ -1,6 +1,7 @@
 /*****************************************************************
-* @file info.c
-* @brief Prints various types of system information
+* @file pinfo.c
+* @brief Prints information for process priority and scheduling
+* policy for current or given process ID
 *
 * Course: CPE2600
 * Section: 111
