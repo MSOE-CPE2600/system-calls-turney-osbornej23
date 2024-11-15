@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     uname(&sys_info); // calling function to fill in sys_info structure
     if (uname(&sys_info) == -1) { // check for potential error return
         perror("Error. Failed to get system information.");
-        return 0;
+        exit(1);
     }
     if (sys_info.nodename[0] != '\0') {
         printf("Host name: %s\n", sys_info.nodename);
@@ -52,7 +52,7 @@ int main(int argc, char* argv[])
     struct sysinfo mem_info;
     if (sysinfo(&mem_info) == -1) {
         perror("Error. Failed to get memory information");
-        return 0;
+        exit(1);
     } // if no fail, print results below
     printf("Total free memory: %lu bytes\n", 
     mem_info.freeram * mem_info.mem_unit);
